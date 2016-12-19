@@ -1,0 +1,25 @@
+[Computer name]
+computerName=dev
+
+[AD information]
+AD_DomainName=vanilla.local
+AD_DomainNameNetbios=vanilla
+AD_AdminUserName=spadmin
+AD_AdminUserPassword=P@ssword1
+AD_SafeModeAdminPassword=P@ssword1
+
+net_ip=192.168.2.200
+net_prefix=24
+net_gtw=192.168.2.1
+net_primDns=192.168.2.1
+net_secDNS=8.8.8.8
+
+developerFolderPath=e:\automation
+softwareSetupPath=e:\software
+sqlSetupPath=\en_sql_server_2012_enterprise_edition_with_sp1_x64_dvd\setup.exe
+sqlAliasName=MSSQLSERVER_Alias
+
+caAuthProvider=NTLM
+
+vsSetupPath=\en_visual_studio_ultimate_2013_x86_dvd_3175319\vs_ultimate.exe
+spPrereqSetupPath=\en_sharepoint_server_2013_x64_dvd_1121447\prerequisiteinstaller.exe
