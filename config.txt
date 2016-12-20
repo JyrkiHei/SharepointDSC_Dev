@@ -1,3 +1,8 @@
+[Installation media]
+Media_Windows=O:
+Media_SQL=P:
+Media_SP=Q:
+
 [Computer name]
 computerName=dev
 

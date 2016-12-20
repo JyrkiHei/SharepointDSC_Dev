@@ -6,7 +6,7 @@ Configuration Localization
 
        [Parameter(Mandatory = $true)]
        [ValidateNotNullorEmpty()]
-       [String]$SystemTimeZone
+       [String]$SystemTimeZone,
 
        [Parameter(Mandatory = $true)]
        [ValidateNotNullorEmpty()]
@@ -41,5 +41,5 @@ Configuration Localization
 
 Localization -NodeName "localhost" -SystemTimeZone "E. Europe Standard Time" -SystemLocale "fi-FI"
 
-Set-DSCLocalConfigurationManager -Path .\Localization –Verbose # Make sure that LCM is set to continue configuration after reboot 
+Set-DSCLocalConfigurationManager -Path .\Localization -Verbose
 Start-DscConfiguration -Path .\Localization -Wait -Verbose -Force

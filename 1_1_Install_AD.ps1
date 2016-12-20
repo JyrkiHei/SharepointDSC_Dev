@@ -63,7 +63,8 @@ $ConfigData = @{
             DomainName = "alpineskihouse.com"             
             RetryCount = 20              
             RetryIntervalSec = 30            
-            PsDscAllowPlainTextPassword = $true            
+            PsDscAllowPlainTextPassword = $true
+            PSDscAllowDomainUser = $true
         }            
     )             
 }             
@@ -75,7 +76,7 @@ NewDomain -ConfigurationData $ConfigData `
         -Message "New Domain Admin Credential")            
             
 # Make sure that LCM is set to continue configuration after reboot            
-Set-DSCLocalConfigurationManager -Path .\ –Verbose            
+Set-DSCLocalConfigurationManager -Path .\ ï¿½Verbose            
             
 # Build the domain            
 Start-DscConfiguration -Wait -Force -Path .\ -Verbose

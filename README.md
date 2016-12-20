@@ -11,3 +11,12 @@ This is just a testproject to learn Powershell DSC anc configure SP development 
 - [ ] Install Visual Studio + Visual Code
 
 This project is currently just one big mess, but hopefully I have time to sort things out and organize this a bit.
+
+---
+* Uusi VMWare kone
+** Syötä salasanaksi P@ssword1
+** Log on automatically
+** Pistä muistia tarpeeksi
+** Laita toinen verkkokortti (Host-only)
+* Buuttaa kone
+* 
