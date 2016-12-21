@@ -1,0 +1,1 @@
+.\AutoSPSourceBuilder\AutoSPSourceBuilder.ps1 -SourceLocation "Q:" -UpdateLocation "C:\DSC\Software\SP_Updates" -Destination "C:\DSC\Software\SP201X" -Languages fi-fi,sv-se
