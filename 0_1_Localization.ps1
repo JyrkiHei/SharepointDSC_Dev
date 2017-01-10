@@ -39,7 +39,12 @@ Configuration Localization
    }
 }
 
-Localization -NodeName "localhost" -SystemTimeZone "E. Europe Standard Time" -SystemLocale "fi-FI"
+. .\Helpers\LoadConfig.ps1
+
+$SystemTimeZone = $ConfigValue.SystemTimeZone
+$SystemLocale = $ConfigValue.SystemLocale
+
+Localization -NodeName "localhost" -SystemTimeZone $SystemTimeZone -SystemLocale $SystemLocale
 
 Set-DSCLocalConfigurationManager -Path .\Localization -Verbose
 Start-DscConfiguration -Path .\Localization -Wait -Verbose -Force
