@@ -19,7 +19,7 @@ else {
 switch ($status) 
     { 
         1 { .\0_0_InstallSteps.ps1 } 
-        2 {"The color is blue."} 
+        2 { .\0_1_Localization.ps1 }
         3 {"The color is green."} 
         4 {"The color is yellow."} 
         5 {"The color is orange."} 

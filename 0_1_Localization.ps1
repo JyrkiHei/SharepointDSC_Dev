@@ -41,8 +41,8 @@ Configuration Localization
 
 . .\Helpers\LoadConfig.ps1
 
-$SystemTimeZone = $ConfigValue.SystemTimeZone
-$SystemLocale = $ConfigValue.SystemLocale
+$SystemTimeZone = $ConfigValues.SystemTimeZone
+$SystemLocale = $ConfigValues.SystemLocale
 
 Localization -NodeName "localhost" -SystemTimeZone $SystemTimeZone -SystemLocale $SystemLocale
 

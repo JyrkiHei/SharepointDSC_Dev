@@ -68,15 +68,15 @@
     }
 }
 
-Get-Content "config.txt" | foreach-object -begin {$h=@{}} -process { $k = [regex]::split($_,'='); if(($k[0].CompareTo("") -ne 0) -and ($k[0].StartsWith("[") -ne $True)) { $h.Add($k[0], $k[1]) } }
+. .\Helpers\LoadConfig.ps1
 
-$DomainName = $h.AD_DomainName
-$DomainNameNetbios = $h.AD_DomainNameNetbios
+$DomainName = $ConfigValues.AD_DomainName
+$DomainNameNetbios = $ConfigValues.AD_DomainNameNetbios
 
-$DomainAdminUser = $h.AD_AdminUserName
-$DomainAdminPasswordPlain = $h.AD_AdminUserPassword
+$DomainAdminUser = $ConfigValues.AD_AdminUserName
+$DomainAdminPasswordPlain = $ConfigValues.AD_AdminUserPassword
 $SafeModeAdminUser = "NotNecessary"
-$SafeModeAdminPasswordPlain = $h.AD_SafeModeAdminPassword
+$SafeModeAdminPasswordPlain = $ConfigValues.AD_SafeModeAdminPassword
 
 $DomainAdminPassword = ConvertTo-SecureString $DomainAdminPasswordPlain -AsPlainText -Force
 $DomainAdmincreds = New-Object System.Management.Automation.PSCredential ($DomainAdminUser, $DomainAdminPassword)
